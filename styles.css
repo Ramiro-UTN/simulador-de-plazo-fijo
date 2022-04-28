@@ -1,0 +1,109 @@
+:root {
+    --color-azul: #525E75;
+    --color-verde-agua: #78938A;
+    --color-verde-claro: #92BA92;
+    --color-claro: #F1DDBF;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-verde-agua);
+    background: linear-gradient(hsl(219, 18%, 39%, .8), hsl(219, 18%, 39%, 0.8)), url(./watercolor-4117017_1280.png);
+
+
+}
+
+header {
+    margin: 0;
+    height: 10%;
+    padding: 5px 5px 5px 15px;
+    background-color: hsl(219, 18%, 39%, 0.8);
+    color: rgb(245, 244, 244);
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    ;
+    display: flex;
+    align-items: center;
+
+}
+
+h1 {
+    font-weight: 5;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 50px;
+
+
+
+
+
+}
+
+form {
+
+    border-radius: 3px;
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: hsl(0, 0%, 100%, .25);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+fieldset {
+    display: flex;
+    column-gap: 80px;
+    row-gap: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+
+
+}
+
+label {
+    padding-bottom: 10px;
+}
+
+
+
+
+input {
+    width: 200px;
+    /* outline-style: none; */
+    outline-color: #d6d4d4;
+
+    height: 20px;
+    margin-top: 5px;
+
+}
+
+input[type="radio"] {
+    width: 50px;
+}
+
+button {
+    width: 90px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: hsl(219, 18%, 39%, 0.7);
+    color: aliceblue;
+    cursor: pointer;
+    align-self: flex-end;
+
+
+}
+
+button:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
