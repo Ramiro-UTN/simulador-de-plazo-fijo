@@ -13,18 +13,35 @@
     <header>
         <h1>Simulador de Plazo Fijo</h1>
     </header>
+
     <main>
         <form action="">
+
             <fieldset class="datos-personales">
                 <legend>Datos Personales</legend>
-                <label for="nombre">Nombre: <input type="text" id="nombre" autocomplete="off" required></label>
-                <label for="apellido">Apellido: <input type="text" id="apellido" autocomplete="off" required></label>
+
+                <div class="flex">
+                    <label for="nombre">NOMBRE: </label>
+                    <input type="text" id="nombre" autocomplete="off" required>
+                </div>
+                <div class="flex">
+                    <label for="apellido">APELLIDO:</label>
+                    <input type="text" id="apellido" autocomplete="off" required>
+
+                </div>
             </fieldset>
 
             <fieldset class="datos-inversion">
                 <legend>Inversión</legend>
-                <label for="monto">Monto: <input type="number" id="monto" min="1000" placeholder=">= 1000"></label>
-                <label for="dias">Cantidad de días: <input type="number" id="dias" min="30" placeholder=">= 30"></label>
+
+                <div class="flex">
+                    <label for="monto">MONTO:</label>
+                    <input type="number" id="monto" min="1000" placeholder=">= 1000">
+                </div>
+                <div class="flex">
+                    <label for="dias">CANTIDAD DE DÍAS: </label>
+                    <input type="number" id="dias" min="30" placeholder=">= 30">
+                </div>
             </fieldset>
 
             <fieldset class="datos-reinversion">
@@ -34,6 +51,7 @@
                     <label for="no"><input type="radio" id="no" value="no" name="reinversion">No</label>
                 </div>
             </fieldset>
+
             <button type="submit" id="calcular">Calcular</button>
 
         </form>

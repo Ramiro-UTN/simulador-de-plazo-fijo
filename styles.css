@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 :root {
     --color-azul: #525E75;
     --color-verde-agua: #78938A;
@@ -7,13 +9,15 @@
 
 html,
 body {
+
     height: 100%;
     width: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--color-verde-agua);
-    background: linear-gradient(hsl(219, 18%, 39%, .8), hsl(219, 18%, 39%, 0.8)), url(./watercolor-4117017_1280.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.2)), url(./pexels-mostafaft-shots-10873117.jpg);
+
 
 
 }
@@ -22,12 +26,13 @@ header {
     margin: 0;
     height: 10%;
     padding: 5px 5px 5px 15px;
-    background-color: hsl(219, 18%, 39%, 0.8);
+    background-color: rgba(0, 0, 0, 0.55);
     color: rgb(245, 244, 244);
     box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
     ;
     display: flex;
     align-items: center;
+
 
 }
 
@@ -38,40 +43,68 @@ h1 {
 main {
     display: flex;
     justify-content: center;
-    margin-top: 5%;
-    gap: 50px;
 
-
-
-
+    padding-top: 5%;
 
 }
 
 form {
 
     border-radius: 3px;
-    padding: 20px;
-    width: 60%;
+    padding: 35px 20px 20px 20px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: hsl(0, 0%, 100%, .25);
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
 
+}
+
+form::before {
+    content: "COMPLETAR CON TUS DATOS";
+    position: absolute;
+    top: -20px;
+
+    background-color: hsl(0, 0%, 0%, 0.4);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 
 fieldset {
     display: flex;
-    column-gap: 80px;
-    row-gap: 20px;
-    padding: 15px;
+    column-gap: 10%;
+    row-gap: 100%;
+    padding: 3%;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(189, 189, 189, 0.548);
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 
 
 }
 
-label {
-    padding-bottom: 10px;
+legend {
+    font-weight: 600;
+}
+
+
+
+.datos-personales label,
+.datos-inversion label {
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.datos-reinversion label {
+    font-weight: 600;
 }
 
 
@@ -87,6 +120,10 @@ input {
 
 }
 
+::placeholder {
+    padding-left: 5px;
+}
+
 input[type="radio"] {
     width: 50px;
 }
@@ -96,7 +133,7 @@ button {
     padding: 5px 10px;
     border-radius: 3px;
     border: none;
-    background-color: hsl(219, 18%, 39%, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     color: aliceblue;
     cursor: pointer;
     align-self: flex-end;
@@ -106,4 +143,11 @@ button {
 
 button:active {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 0.5%;
 }
