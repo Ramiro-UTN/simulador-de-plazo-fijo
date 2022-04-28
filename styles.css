@@ -58,7 +58,7 @@ form {
     flex-direction: column;
     gap: 15px;
     /* background-color: rgba(0, 0, 0, 0.3); */
-    background-color: rgba(122, 122, 122, 0.3);
+    background-color: rgba(122, 122, 122, 0.28);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
 
@@ -68,12 +68,12 @@ form::before {
     content: "COMPLETAR CON TUS DATOS";
     position: absolute;
     top: -20px;
-
-    background-color: hsl(0, 0%, 0%, 0.3);
+    border-radius: 3px;
+    background-color: hsl(0, 0%, 0%, 0.48);
     color: white;
     padding: 5px 10px;
-    border: 1px solid rgba(0, 0, 0, 0.09);
-    border-radius: 3px;
+
+
 }
 
 fieldset {
@@ -96,13 +96,15 @@ fieldset {
 }
 
 legend {
-    font-weight: 600;
-    color: rgb(0, 0, 0);
+    font-weight: 300;
+    color: rgb(255, 255, 255);
     padding: 3px 7px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(189, 189, 189, 0.3);
     ;
-    border-radius: 5px;
+    border-radius: 3px;
+
+
 }
 
 
