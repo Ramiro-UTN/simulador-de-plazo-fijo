@@ -128,7 +128,7 @@ button {
     padding: 5px 10px;
     border-radius: 3px;
     border: none;
-    background-color: hsl(219, 18%, 39%, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     color: aliceblue;
     cursor: pointer;
     align-self: flex-end;
