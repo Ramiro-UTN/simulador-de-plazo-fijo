@@ -56,7 +56,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     position: relative;
 
@@ -82,11 +82,16 @@ fieldset {
     align-items: center;
     justify-content: center;
 
-    border-color: rgba(255, 255, 255, 0.562);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid rgba(189, 189, 189, 0.548);
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 
 
+}
+
+legend {
+    font-weight: 600;
 }
 
 
