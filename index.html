@@ -6,6 +6,7 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="./script.js" defer></script>
 </head>
 
@@ -22,11 +23,11 @@
 
                 <div class="flex">
                     <label for="nombre">NOMBRE: </label>
-                    <input type="text" id="nombre" autocomplete="off" required>
+                    <input type="text" id="nombre" autocomplete="off">
                 </div>
                 <div class="flex">
                     <label for="apellido">APELLIDO:</label>
-                    <input type="text" id="apellido" autocomplete="off" required>
+                    <input type="text" id="apellido" autocomplete="off">
 
                 </div>
             </fieldset>
@@ -36,11 +37,11 @@
 
                 <div class="flex">
                     <label for="monto">MONTO:</label>
-                    <input type="number" id="monto" min="1000" placeholder=">= 1000..." required>
+                    <input type="number" id="monto" min="1000" placeholder=">= 1000...">
                 </div>
                 <div class="flex">
                     <label for="dias">CANTIDAD DE DÍAS: </label>
-                    <input type="number" id="dias" min="30" placeholder=">= 30..." required>
+                    <input type="number" id="dias" min="30" placeholder=">= 30...">
                 </div>
             </fieldset>
 
@@ -55,6 +56,35 @@
             <button type="submit" id="calcular">Calcular</button>
 
         </form>
+
+        <dialog class="datos-output">
+            <div class="contenedor-datos">
+                <div class="header-output-datos">
+                    <h2>Datos Plazo Fijo</h2>
+                    <span class="material-icons cerrar">close</span>
+                </div>
+                <div class="flex-inline">
+                    <p>Nombre/s:</p><span class="ouput-nombre"></span>
+                </div>
+                <div class="flex-inline">
+                    <p>Apellido/s:</p><span class="output-apellido"></span>
+                </div>
+
+                <div class="flex-inline">
+                    <p>Monto inicial:</p><span class="output-monto-inicial"></span>
+                </div>
+
+                <div class="flex-inline">
+                    <p>Días:</p><span class="output-dias"></span>
+                </div>
+
+
+                <div class="flex-inline resultado">
+                    <p>MONTO FINAL:</p><span class="output-monto-final"></span>
+                </div>
+            </div>
+
+        </dialog>
 
 
     </main>

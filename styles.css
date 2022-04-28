@@ -165,3 +165,59 @@ button:active {
     justify-content: center;
     padding-bottom: 0.5%;
 }
+
+.flex-inline {
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    align-items: center;
+
+}
+
+dialog {
+
+    border: none;
+    min-width: 50%;
+
+}
+
+.contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+dialog h2 {
+    margin: 0;
+}
+
+.header-output-datos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cerrar:hover {
+    cursor: pointer;
+
+}
+
+dialog p {
+    font-weight: 600;
+    margin: 0;
+
+}
+
+dialog span {
+    padding-left: 5px;
+
+}
+
+.resultado {
+    align-self: flex-end;
+    font-size: 16px;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
