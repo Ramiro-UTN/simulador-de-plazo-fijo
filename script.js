@@ -1,4 +1,4 @@
-//elemento "dialog", se va a mostrar en pantalla al presionar "calcular"
+//elemento "dialog"= datosOutput, se debe mostrar en pantalla al presionar "calcular"
 const datosOutput = document.querySelector('.datos-output');
 const calcularBtn = document.getElementById("calcular");
 const cerrarBtn = document.querySelector('.cerrar');
