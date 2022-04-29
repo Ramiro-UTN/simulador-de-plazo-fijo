@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-:root {
-    --color-azul: #525E75;
-    --color-verde-agua: #78938A;
-    --color-verde-claro: #92BA92;
-    --color-claro: #F1DDBF;
-}
 
 html {
     min-height: 100%;
@@ -20,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-verde-agua);
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.2)), url(./pexels-mostafaft-shots-10873117.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.4)), url(./pexels-mostafaft-shots-10873117.jpg);
 
 
 
@@ -30,10 +24,10 @@ header {
     margin: 0;
     height: 10%;
     padding: 5px 5px 5px 15px;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.29);
     color: rgb(245, 244, 244);
-    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
-    ;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
     display: flex;
     align-items: center;
 
@@ -126,6 +120,7 @@ legend {
 .datos-inversion label {
     font-size: 13px;
     font-weight: 600;
+    color: rgb(3, 145, 180);
 
 }
 
@@ -237,62 +232,115 @@ dialog span {
 
 
 @media only screen and (max-width: 1000px) {
-
-    body,
-    html {
-        min-height: 100vh;
-
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(./pexels-mostafaft-shots-10873117.jpg);
     }
-
 
     header {
         justify-content: center;
-        height: 4%;
-        padding: 15px;
-
-
-    }
-
-    #calcular {
-        align-self: center;
-    }
-
-    main {
-
-        min-height: 100%;
+        margin-bottom: 40px;
     }
 
     form {
-        background-color: rgb(255, 255, 255, 0);
-        border: none;
-        box-shadow: none;
-        max-height: 100%;
-        width: 80vw;
-
-
-
+        min-width: 94vw;
+        padding-top: 70px;
+        max-height: fit-content;
     }
 
-    form::before {
-        display: none;
-    }
-
-    label {
-        margin-top: 5px;
-    }
-
-    .datos-personales,
-    .datos-inversion {
+    .datos-inversion,
+    .datos-personales {
         display: flex;
         flex-direction: column;
     }
 
     input[type="text"],
     input[type="number"] {
-        width: 300px;
+        width: 85%;
+        height: 70px;
+        font-size: 60px;
+    }
+
+    .flex {
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    fieldset {
+        max-height: fit-content;
+        row-gap: 20px;
+    }
+
+    .datos-personales label,
+    .datos-inversion label {
+        font-size: 36px;
+        font-weight: 600;
+        color: rgb(3, 145, 180);
+
+    }
+
+    label {
+        font-size: 40px;
+
+    }
+
+    legend {
+        font-size: 36px;
+
     }
 
 
+
+    form::before {
+        font-size: 28px;
+        padding: 10px 20px;
+    }
+
+    #calcular {
+        align-self: center;
+        padding: 20px 40px;
+        font-size: 36px;
+        text-align: center;
+        width: fit-content;
+        margin-top: 15px;
+
+
+    }
+
+    dialog {
+
+        border: none;
+        min-width: 90%;
+
+    }
+
+    .contenedor-datos {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 36px;
+    }
+
+    dialog h2 {
+        margin: 0;
+    }
+
+    .header-output-datos {
+
+        margin-bottom: 30px;
+    }
+
+
+    dialog span {
+        padding-left: 10px;
+
+    }
+
+    .resultado {
+        align-self: flex-end;
+        font-size: 36px;
+    }
 
 
 }
