@@ -7,10 +7,13 @@
     --color-claro: #F1DDBF;
 }
 
-html,
+html {
+    height: 100%
+}
+
 body {
 
-    height: 100%;
+    height: 100vh;
     width: 100%;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -224,7 +227,7 @@ dialog span {
 
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
     header {
         justify-content: center;
         height: 4%;
