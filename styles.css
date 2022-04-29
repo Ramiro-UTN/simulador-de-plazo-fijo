@@ -48,7 +48,7 @@ main {
     display: flex;
     justify-content: center;
 
-    padding-top: 30px;
+    padding-top: 3%;
 
 
 
@@ -67,7 +67,7 @@ form {
     background-color: rgba(179, 173, 173, 0.28);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
-    min-height: 66vh;
+    max-height: 66vh;
 
 }
 
@@ -91,10 +91,11 @@ fieldset {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
+    min-width: 90%;
     border: none;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-height: 140px;
 
     /* background-color: rgba(255, 255, 255, 0.1); */
     background-color: rgba(0, 0, 0, 0.35);
@@ -231,16 +232,71 @@ dialog span {
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
+
+    body,
+    html {
+        height: 100vh;
+
+    }
+
+
     header {
         justify-content: center;
         height: 4%;
         padding: 15px;
-        margin-bottom: 10px;
+        margin-bottom: 50px;
+
     }
 
     #calcular {
         align-self: center;
     }
 
+    main {
+
+        height: 90%;
+    }
+
+    form {
+        background-color: rgb(255, 255, 255, 0);
+        border: none;
+        box-shadow: none;
+        max-height: 100%;
+        width: 80vw;
+
+
+    }
+
+    label {
+        margin-top: 5px;
+    }
+
+    .datos-personales,
+    .datos-inversion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 300px;
+    }
+
+
+
+
 }
+
+/* @media only screen and (max-width: 900px) {
+
+    body,
+    html {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    form {
+        min-height: 84%;
+    }
+} */
