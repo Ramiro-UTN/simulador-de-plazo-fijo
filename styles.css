@@ -8,13 +8,13 @@
 }
 
 html {
-    height: 100%;
+    min-height: 100%;
 
 }
 
 body {
 
-    height: 100vh;
+    min-height: 100%;
     width: 100%;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -46,9 +46,13 @@ h1 {
 
 main {
     display: flex;
+
     justify-content: center;
 
     padding-top: 3%;
+
+
+    min-height: 100%;
 
 
 
@@ -236,7 +240,7 @@ dialog span {
 
     body,
     html {
-        height: 100vh;
+        min-height: 100vh;
 
     }
 
@@ -245,7 +249,7 @@ dialog span {
         justify-content: center;
         height: 4%;
         padding: 15px;
-        margin-bottom: 50px;
+
 
     }
 
@@ -255,7 +259,7 @@ dialog span {
 
     main {
 
-        height: 90%;
+        min-height: 100%;
     }
 
     form {
@@ -266,6 +270,11 @@ dialog span {
         width: 80vw;
 
 
+
+    }
+
+    form::before {
+        display: none;
     }
 
     label {
@@ -287,16 +296,3 @@ dialog span {
 
 
 }
-
-/* @media only screen and (max-width: 900px) {
-
-    body,
-    html {
-        max-height: 100vh;
-        overflow: hidden;
-    }
-
-    form {
-        min-height: 84%;
-    }
-} */
