@@ -134,7 +134,8 @@ legend {
 input {
     width: 200px;
     /* outline-style: none; */
-    outline-color: #d6d4d4;
+    outline-color: rgb(3, 145, 180);
+    ;
 
     height: 20px;
     margin-top: 5px;
@@ -227,6 +228,25 @@ dialog span {
 
 ::backdrop {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+table {
+    width: 100%;
+    z-index: 1;
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.hide {
+    display: none;
 }
 
 

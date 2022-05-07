@@ -48,8 +48,10 @@
             <fieldset class="datos-reinversion">
                 <legend>¿Desea reinvertir el capital?</legend>
                 <div>
-                    <label for="si"><input type="radio" id="si" value="si" name="reinversion" checked>Si</label>
-                    <label for="no"><input type="radio" id="no" value="no" name="reinversion">No</label>
+                    <label for="radio-opcion-si"><input type="radio" id="radio-opcion-si" value="si" name="reinversion"
+                            checked>Si</label>
+                    <label for="radio-opcion-no"><input type="radio" id="radio-opcion-no" value="no"
+                            name="reinversion">No</label>
                 </div>
             </fieldset>
 
@@ -64,7 +66,7 @@
                     <span class="material-icons cerrar">close</span>
                 </div>
                 <div class="flex-inline">
-                    <p>Nombre/s:</p><span class="ouput-nombre"></span>
+                    <p>Nombre/s:</p><span class="output-nombre"></span>
                 </div>
                 <div class="flex-inline">
                     <p>Apellido/s:</p><span class="output-apellido"></span>
@@ -82,6 +84,36 @@
                 <div class="flex-inline resultado">
                     <p>MONTO FINAL:</p><span class="output-monto-final"></span>
                 </div>
+            </div>
+
+            <div class="table-container hide">
+                <table>
+                    <tr>
+                        <th>Período</th>
+                        <th>Monto Inicial</th>
+                        <th>Monto Final</th>
+                    </tr>
+                    <tr class="periodo-uno">
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="periodo-dos">
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="periodo-tres">
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="periodo-cuatro">
+                        <td>4</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
             </div>
 
         </dialog>
