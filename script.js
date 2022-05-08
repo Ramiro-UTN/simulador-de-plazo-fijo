@@ -17,7 +17,7 @@ calcularBtn.addEventListener('click', (e) => {
 
         e.preventDefault();
         datosOutput.showModal();
-        function MostrarDatos();
+        MostrarDatos();
 
     }
 
