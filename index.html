@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="flex-inline">
-                        <p>Monto inicial:</p><span class="output-monto-inicial">${{montoInicial}}</span>
+                        <p>Monto inicial:</p><span class="output-monto-inicial">${{montoInicialFijo}}</span>
                     </div>
 
                     <div class="flex-inline">
@@ -89,7 +89,7 @@
 
 
                     <div class="flex-inline resultado">
-                        <p>MONTO FINAL:</p><span class="output-monto-final">${{calcularMontoFinal}}</span>
+                        <p>MONTO FINAL:</p><span class="output-monto-final">${{montoFinal}}</span>
                     </div>
                 </div>
 
@@ -100,32 +100,15 @@
                             <th>Monto Inicial</th>
                             <th>Monto Final</th>
                         </tr>
-                        <tr class="periodo-uno">
-                            <td>1</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="periodo-dos">
-                            <td>2</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="periodo-tres">
-                            <td>3</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr class="periodo-cuatro">
-                            <td>4</td>
-                            <td></td>
-                            <td></td>
+                        <tr v-for="obj in periodosReinversion" class="periodo-uno">
+                            <td>{{obj.nroPeriodo}}</td>
+                            <td>{{obj.inicial.toFixed(2)}}</td>
+                            <td>{{obj.final.toFixed(2)}}</td>
                         </tr>
                     </table>
                 </div>
 
             </dialog>
-
-
         </main>
     </div>
 </body>
