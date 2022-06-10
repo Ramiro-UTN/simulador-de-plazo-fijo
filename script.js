@@ -1,59 +1,65 @@
-//elemento "dialog"= datosOutput, se debe mostrar en pantalla al presionar "calcular"
-const datosOutput = document.querySelector('.datos-output');
-const calcularBtn = document.getElementById("calcular");
-const cerrarBtn = document.querySelector('.cerrar');
+let app = Vue.createApp({
+    data() {
+        return {
+            nombre: '',
+            apellido: '',
+            montoInicial: null,
+            dias: null,
+            reinvertir: true,
+            abrirVentana: false,
+            porcentaje: null,
 
 
-//Abre el cuadro con los datos luego de presionar el botón "calcular"
-calcularBtn.addEventListener('click', (e) => {
 
-    let nombre = document.getElementById('nombre').value;
-    let apellido = document.getElementById('apellido').value;
-    let dias = document.getElementById('dias').value;
-    let monto = document.getElementById('monto').value;
 
-    //Si todos los campos  son completados de forma correcta, evito que se refresque la página y muestro los datos
-    if (nombre !== "" && apellido !== "" && dias !== "" && monto !== "" && monto >= 1000 && dias >= 30) {
 
-        e.preventDefault();
-        datosOutput.showModal();
-        MostrarDatos();
+        }
+    },
+    methods: {
+        mostrarDatos(e) {
+
+            if (this.nombre && this.apellido !== "" && this.dias !== "" && this.montoInicial !== "" && this.montoInicial >= 1000 && this.dias >= 30) {
+
+                e.preventDefault();
+                this.ValidarPorcentajeSegunDias();
+
+                this.abrirVentana = true;
+
+            }
+
+        },
+        cerrarVentana() {
+            this.abrirVentana = false;
+        },
+        ValidarPorcentajeSegunDias() {
+            console.log('dias:', this.dias + 'monto:', this.montoInicial)
+            if (this.dias >= 30 && this.dias <= 60) this.porcentaje = 40;
+            if (this.dias > 60 && this.dias <= 120) this.porcentaje = 45;
+            if (this.dias > 120 && this.dias < 360) this.porcentaje = 50;
+            if (this.dias >= 360) this.porcentaje = 65;
+            console.log('dias: ', this.dias + 'monto: ', this.montoInicial, 'porcentaje: ' + this.porcentaje)
+
+        }
+
+    },
+    computed: {
+
+        calcularMontoFinal() {
+
+            console.log('dias: ', this.dias + 'monto: ', this.montoInicial, 'porcentaje: ' + this.porcentaje);
+
+            let montoFinal = this.montoInicial + (this.montoInicial * ((this.dias / 360)) * (+this.porcentaje / 100));
+
+            return montoFinal.toFixed(2);
+        }
 
     }
+}).mount('#app')
 
 
-
-})
-
-cerrarBtn.addEventListener('click', () => {
-
-    datosOutput.close();
-})
-
+/* 
 function MostrarDatos() {
 
-    //Muestro Nombre
-    let nombre = document.getElementById('nombre').value;
-    let outputNombre = document.querySelector('.output-nombre');
-    outputNombre.textContent = nombre;
-
-    //Muestro Apellido
-
-    let apellido = document.getElementById('apellido').value;
-    let outputApellido = document.querySelector('.output-apellido');
-    outputApellido.textContent = apellido;
-
-    //Muestro Monto inicial
-
-    let monto = document.getElementById('monto').value;
-    let outputMontoInicial = document.querySelector('.output-monto-inicial');
-    outputMontoInicial.textContent = "$ " + monto;
-
-    //Muestro cantidad de días a invertir
-
-    let dias = document.getElementById('dias').value;
-    let outputDias = document.querySelector('.output-dias');
-    outputDias.textContent = dias;
 
     //Muestro monto final
 
@@ -139,4 +145,4 @@ function ValidarPorcentajeSegunDias(dias) {
 
     return porcentaje;
 
-}
+} */
